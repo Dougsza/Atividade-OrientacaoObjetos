@@ -23,14 +23,14 @@ public class Locadora {
     public List<Veiculo> listaV = new ArrayList<>();
     
     public String resultado;
-    
+//Construtor   
 public Locadora(String nomeCliente,int hora, String modeloCarro, double valorAluguel){
     this.nomeCliente = nomeCliente;
     this.hora = hora;
     this.modeloCarro = modeloCarro;
     valorModelo = valorAluguel;
 }
-    
+ //Métodos   
 public void valorHora(){
     valorPHora = valorModelo * hora;        
    

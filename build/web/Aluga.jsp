@@ -17,15 +17,18 @@
     </head>
     <body>
         <%  
-       try{     
+           
+       try{ 
+        //Variáveis
         String modelo, nomeCliente, valorHoraTxt;        
         int hora;        
-        
+        //Pega os dados que o usuário digitou e coloca nas variáveis
         nomeCliente = request.getParameter("nome");
         modelo = request.getParameter("modelo");        
         valorHoraTxt = request.getParameter("hora");
         hora = Integer.parseInt(valorHoraTxt); 
         
+        //Envia uma excessão
         if(nomeCliente == ""){
             throw new Exception("O nome do cliente não pode estar vazio");
         }
@@ -33,17 +36,22 @@
             throw new Exception("A hora não pode ser negativa!");
         }
         
+        //Instanciando e colocando os parâmetros na classe Locadora
         Locadora locadora = new Locadora(nomeCliente, hora, modelo, 75.00);
         
+        //Instanciando os veículos
         Veiculo v1 = new Veiculo("Civic");
         Veiculo v2 = new Veiculo("Audi");
         Veiculo v3 = new Veiculo("HB20");        
         Veiculo v4 = new Veiculo("Fox");
+        
+        //Adicionando os veículos no método da classe locadora
         locadora.AddVeiculo(v1);
         locadora.AddVeiculo(v2);
         locadora.AddVeiculo(v3);  
         locadora.AddVeiculo(v4);
         
+        //Lista de veículos disponíveis
         out.print("Lista de carros disponíveis:<br>");
         for(Veiculo v : locadora.listaV){
             if(v.modeloCarro.contains(modelo)){
@@ -54,6 +62,7 @@
         }   
    
        }catch(Exception e ){
+          //Tratamento de erro 
           out.print(e.getMessage());
     }
   %>        
