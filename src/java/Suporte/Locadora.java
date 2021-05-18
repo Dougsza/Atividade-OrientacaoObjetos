@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package Suporte;
+import Suporte.Veiculo;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,32 +13,14 @@ import java.util.List;
  * @author dougl
  */
 public class Locadora {
-    //Variáveis
-    public int hora;    
-    public double valorPHora;    
-    public double valorModelo;
-    public String nomeCliente;
-    public String modeloCarro;
-    
-    //Lista de veículos
-    public List<Veiculo> listaV = new ArrayList<>();
-    
-    public String resultado;
-//Construtor   
-public Locadora(String nomeCliente,int hora, String modeloCarro, double valorAluguel){
-    this.nomeCliente = nomeCliente;
-    this.hora = hora;
-    this.modeloCarro = modeloCarro;
-    valorModelo = valorAluguel;
-}
- //Métodos   
-public void valorHora(){
-    valorPHora = valorModelo * hora;        
-   
-}
+     
+//Lista de veículos
+    public List<Veiculo> listaV = new ArrayList<>();   
 
-public void AddVeiculo(Veiculo veiculo){
-    listaV.add(veiculo);
-  }
+
+ //Métodos  
+    public void AddVeiculo(Veiculo veiculo){
+        listaV.add(veiculo);
+    }   
 
 }

@@ -5,8 +5,10 @@ public class Veiculo {
     public String modeloCarro;   
    
     //Construtor
+     public Veiculo(){
+         
+    } 
     public Veiculo(String car){
-        modeloCarro = car;   
-        
+        modeloCarro = car; 
     }   
 }
