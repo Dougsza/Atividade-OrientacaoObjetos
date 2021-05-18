@@ -17,7 +17,7 @@
     </head>
     <body>
         <%  
-           
+       //Tratamento de erro     
        try{ 
            
         //Instanciando e colocando os parâmetros na classe Locadora
@@ -43,7 +43,7 @@
         }      
 
        }catch(Exception e ){
-          //Tratamento de erro 
+          
           out.print(e.getMessage());
     }
         %>

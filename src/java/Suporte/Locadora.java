@@ -14,11 +14,15 @@ import java.util.List;
  */
 public class Locadora {
      
-//Lista de veículos
+    //Lista de veículos
     public List<Veiculo> listaV = new ArrayList<>();   
+    
+    //Constructor
+    public Locadora(){
+        
+    }
 
-
- //Métodos  
+    //Métodos  
     public void AddVeiculo(Veiculo veiculo){
         listaV.add(veiculo);
     }   

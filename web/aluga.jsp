@@ -36,10 +36,14 @@
             if(hora <1){
                 throw new Exception("A hora não pode ser negativa!");
             }
-            
+            //Instanciando a classe aluguel;
             Aluguel aluguel = new Aluguel(nomeCliente, hora, modelo, 75.00);
-            aluguel.valorHora(); 
-            
+            aluguel.valorHora();          
+                        
+            out.print(nomeCliente + " o valor do aluguel fica " + aluguel.valorPHora);
+            out.print(minhalista.get(1));
+                   
+
         }catch(Exception e){
             out.print(e.getMessage());
         }
